@@ -11,15 +11,14 @@ function solution(my_string) {
         else{
             //숫자이후에 알파벳나오면 배열에 담고 초기화
             //숫자가 마지막일때 문제발생
-            if(num !== '') {newArr.push(parseInt(num));}
+            //if(num !== '') {newArr.push(parseInt(num));}
+            newArr.push(num);
             num = '';
         }
     })
     if(num !== '') {newArr.push(parseInt(num));}
     //배열의 합 구하기
-    const sum = newArr.reduce((arr,cur)=>{
-        return arr + cur;
-    },0)
+    const sum = newArr.reduce((arr,cur)=> arr + Number(cur),0);
 
     return sum;
 }
