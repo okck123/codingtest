@@ -16,7 +16,8 @@ function solution(s) {
         if (newObj[key] > 1) delete newObj[key];
     }
     //객체의 key를 배열로 받아와 정렬후 형변환한뒤 , 삭제
-    let newArr = [...Object.keys(newObj)].sort().toString().replaceAll(',','');
+    //toString().repalceAll() -> join('')?
+    let newArr = [...Object.keys(newObj)].sort().join('');
 
     return newArr;
 }
