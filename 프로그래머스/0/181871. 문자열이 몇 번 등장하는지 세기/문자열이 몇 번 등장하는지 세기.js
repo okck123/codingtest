@@ -3,8 +3,8 @@ function solution(myString, pat) {
     //pat의 index시작이 0,0이 아닐때로 구분
     
     var count = 0;
+    if(!myString.includes(pat)) return count;
     for(let i = 0; i<myString.length;i++){
-        if(!myString.includes(pat)) break;
         const target = myString.slice(i,i+pat.length);
         if(target.includes(pat)) count++;
         
