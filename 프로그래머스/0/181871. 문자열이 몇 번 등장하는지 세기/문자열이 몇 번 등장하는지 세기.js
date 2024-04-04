@@ -1,10 +1,10 @@
 function solution(myString, pat) {
-    //myString안에 pat이 있으면 count++ 하고 myString 정리<-정리 하려니 조건이 너무 많음
-    //pat의 index시작이 0,0이 아닐때로 구분
-    
+    //원본으로 제시된 데이터를 분해하고 재결합 하는 행위를 줄여야 한다.
+    //문제의 의도를 정확히 파악하자
     var count = 0;
-    if(!myString.includes(pat)) return count;
+   
     for(let i = 0; i<myString.length;i++){
+        if(!myString.includes(pat)) break;
         const target = myString.slice(i,i+pat.length);
         if(target.includes(pat)) count++;
         
