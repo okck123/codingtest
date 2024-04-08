@@ -3,8 +3,9 @@ function solution(spell, dic) {
     dic = dic.map(e=>{
         if(e.length === spell.length) return e;
         else return 0;
-    }).filter(e=>e!==0);
-    dic.forEach(i=>{
+    })
+    .filter(e=>e!==0)
+    .forEach(i=>{
         let count = 0;
         spell.forEach(j=>{
             if(i.includes(j)){
@@ -12,6 +13,6 @@ function solution(spell, dic) {
             }
         })
         if(count === spell.length) answer = 1;
-    })
+    });
     return answer;
 }
