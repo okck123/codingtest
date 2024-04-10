@@ -9,10 +9,9 @@
 // a1 = 3;
 function solution(num, total) {
     var answer = [];
-    let a1 = total / num - (num-1)/2;
+    const a1 = total / num - (num-1)/2;
     for(let i = 0; i<num;i++){
-        answer.push(a1);
-        a1++;
+        answer.push(a1+i);
     }
     return answer;
 }
